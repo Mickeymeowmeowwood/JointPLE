@@ -13,7 +13,6 @@ This repository contains the code, data artifacts, and scripts used in the paper
 - [Overview](#overview)  
 - [Contents](#contents)  
 - [Getting Started](#getting-started)  
-- [Reproducing Experiments](#reproducing-experiments)  
 - [Figures](#figures)  
 - [Data Availability & Artifacts](#data-availability--artifacts)  
 - [Environment & Dependencies](#environment--dependencies)  
@@ -56,14 +55,11 @@ To get up and running:
 
 1. Clone this repository:  
    ```bash
-   git clone [https://github.com/<your-org>/<your-repo>](https://github.com/Mickeymeowmeowwood/JointPLE-A-Consistency-gated-PLE-Framework-with-Per-aspect-Attention.git
-   cd JointPLE-A-Consistency-gated-PLE-Framework-with-Per-aspect-Attention
+   git clone https://github.com/Mickeymeowmeowwood/JointPLE.git
+   cd JointPLE
 Install dependencies:
-
-bash
-复制代码
 conda env create -f environment.yml
-# or
+or
 pip install -r requirements.txt
 Download the ASAP dataset following its official instructions. (Do not include raw ASAP data in this repo if license prohibits redistribution.)
 
@@ -77,10 +73,7 @@ Run hyperparameter search: bash scripts/run_hpo.sh
 
 Generate figures:
 
-bash
-复制代码
-bash scripts/plots_make_all.sh
-Figures
+## Figures
 Each figure in the paper corresponds to one plotting script. The PDF/SVG images are provided for direct visual comparison:
 
 Fig.1 → figs/S2_dataset_profile.pdf
@@ -105,7 +98,7 @@ Fig.10 → figs/S3_efficiency.pdf
 
 Fig.11 → figs/S4_embed.pdf
 
-Data Availability & Artifacts
+## Data Availability & Artifacts
 
 The ASAP dataset is publicly available under its official terms.
 
@@ -117,7 +110,7 @@ These artifacts provide the minimal dataset necessary to interpret, replicate, a
 
 If any result or data is not publicly shareable for licensing or privacy reasons, contact the authors to request access.
 
-Environment & Dependencies
+## Environment & Dependencies
 Python version: 3.12.3 (e.g. 3.8+)
 
 Key libraries and versions (for example):
@@ -132,13 +125,13 @@ Other usual dependencies: tqdm, matplotlib, etc.
 
 Hardware: GPU(s) with at least ~X GB memory (for ASAP’s long reviews)
 
-Reproducibility:
+## Reproducibility:
 
 Fixed random seeds: {42, 47, 52, 57, 62}
 
 All training / evaluation scripts log hyperparameters and configuration files.
 
-Results & Benchmarks
+## Results & Benchmarks
 Results in this repository match those reported in the paper. For example:
 
 Metric	Baseline	JointPLE (main)
@@ -146,3 +139,11 @@ RP MAE	0.4266	0.4167
 ACSA Macro-F1	…	…
 
 See results/ple_main_model.csv and results/ablation_summary.csv for full details.
+
+## License
+
+This work is licensed under [choose your license, e.g. MIT or Apache-2.0]. See the LICENSE file for details.
+
+## References
+
+ASAP dataset: Bu et al. (2021), NAACL-HLT
